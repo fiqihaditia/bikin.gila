@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tester Navbar Qiuu</title>
+    <!-- js-html -->
+    <style>
+        #element {
+            font-size: 10px;
+            font-family: arial, sans-serif;
+            font-weight: bold;
+            font-variant: small-caps;
+            font: italic bold 16px Arial, sans-serif;
+            position: relative;
+            top: -5px;
+        }
+
+        header {
+            position: relative;
+            z-index: 100;
+        }
+
+        #gambar {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 50%;
+            .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+input:checked ~ span:nth-child(4) {
+        background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
+}
+}
+    </style>
+</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<header>
+ <body class="body-index"> 
+    <nav>
+        <div class="logo">
+            <h4>Qiuu Gabut</h4>
+        </div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Menu Awal</a></li> 
+            <li><a href="login.html">login</a></li>           
+        </ul>          
+
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    </header>
+
+<!-- CONTENT 1 -->
+ <div>
+ <body>
+<img id="gambar" src="1739290476713.jpg" alt="Gambar Animasi" />
+         
+
+<script>
+    const gambar = document.getElementById('gambar');
+    let posisiX = 0;
+    const kecepatan = 5;
+
+    function animate() {
+        posisiX += kecepatan;
+        gambar.style.left = posisiX + 'px';
+
+        if (posisiX > window.innerWidth) {
+            posisiX = -gambar.width;
+        }
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate)
+
+</script>
+
+    <div>
+        <h1>
+            <span id="element"></span>
+        </h1>
+    </div>
+
+    <script src="main.js"></script>
+
+    <!-- animatin text -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>hallo</i> ini wibesite saya', 'website ini dibuat menggunakan html,css,js', '&amp; tentang saya bisa kalian lihat di garis 3 pojok kanan atas'],
+      typeSpeed: 30,
+    });
+  </script>
+  </body>
+
+
+ </body>
+</html>
